@@ -1,0 +1,64 @@
+version: '3.8'
+services:
+  cuisineapi:
+    build: ./CuisineApi
+    ports:
+      - "5001:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=sql_cuisine;Database=CuisineDb;User=sa;Password=Your_password123;
+    depends_on:
+      - sql_cuisine
+
+  gateway:
+    build: ./Gateway
+    ports:
+      - "8080:80"
+    depends_on:
+      - cuisineapi
+      - restaurantservice
+      - reviewservice
+
+  restaurantservice:
+    build: ./RestaurantService
+    ports:
+      - "5002:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=sql_restaurant;Database=RestaurantDb;User=sa;Password=Your_password123;
+    depends_on:
+      - sql_restaurant
+
+  reviewservice:
+    build: ./ReviewService
+    ports:
+      - "5003:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=sql_review;Database=ReviewDb;User=sa;Password=Your_password123;
+    depends_on:
+      - sql_review
+
+  sql_cuisine:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - SA_PASSWORD=Your_password123
+      - ACCEPT_EULA=Y
+    ports:
+      - "14331:1433"
+
+  sql_restaurant:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - SA_PASSWORD=Your_password123
+      - ACCEPT_EULA=Y
+    ports:
+      - "14332:1433"
+
+  sql_review:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - SA_PASSWORD=Your_password123
+      - ACCEPT_EULA=Y
+    ports:
+      - "14333:1433"

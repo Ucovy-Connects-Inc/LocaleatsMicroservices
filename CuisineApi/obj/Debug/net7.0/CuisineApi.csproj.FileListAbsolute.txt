@@ -1,0 +1,6 @@
+C:\workspace\CuisineApi\obj\Debug\net7.0\CuisineApi.csproj.AssemblyReference.cache
+C:\workspace\CuisineApi\obj\Debug\net7.0\CuisineApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\workspace\CuisineApi\obj\Debug\net7.0\CuisineApi.AssemblyInfoInputs.cache
+C:\workspace\CuisineApi\obj\Debug\net7.0\CuisineApi.AssemblyInfo.cs
+C:\workspace\CuisineApi\obj\Debug\net7.0\CuisineApi.csproj.CoreCompileInputs.cache
+C:\workspace\CuisineApi\obj\Debug\net7.0\CuisineApi.MvcApplicationPartsAssemblyInfo.cache
