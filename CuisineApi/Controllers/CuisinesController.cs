@@ -48,8 +48,8 @@ namespace CuisineApi.Controllers
         public async Task<IActionResult> Exists(int id)
         {
             var exists = await _context.Cuisines.AsNoTracking().AnyAsync(c => c.Id == id);
-            if (exists) return Ok();
-            return NotFound();
+            // return a consistent JSON contract so callers don't have to handle 404 vs 200
+            return Ok(new { exists });
         }
 
         // POST: api/Cuisines
@@ -57,6 +57,13 @@ namespace CuisineApi.Controllers
         public async Task<ActionResult<CuisineReadDto>> Create([FromBody] CuisineCreateUpdateDto dto)
         {
             if (!ModelState.IsValid) return ValidationProblem(ModelState);
+
+            // prevent duplicate names (basic business rule)
+            var duplicate = await _context.Cuisines.AnyAsync(c => c.Name == dto.Name);
+            if (duplicate)
+            {
+                return Conflict(new { message = "A cuisine with the same name already exists." });
+            }
 
             var cuisine = new Cuisine { Name = dto.Name, Description = dto.Description };
             _context.Cuisines.Add(cuisine);
