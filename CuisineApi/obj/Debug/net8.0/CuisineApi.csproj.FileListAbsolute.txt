@@ -140,3 +140,4 @@ C:\workspace\CuisineApi\bin\Debug\net8.0\OpenTelemetry.Exporter.Console.dll
 C:\workspace\CuisineApi\bin\Debug\net8.0\OpenTelemetry.Extensions.Hosting.dll
 C:\workspace\CuisineApi\bin\Debug\net8.0\OpenTelemetry.Instrumentation.AspNetCore.dll
 C:\workspace\CuisineApi\bin\Debug\net8.0\OpenTelemetry.Instrumentation.Http.dll
+C:\workspace\CuisineApi\obj\Debug\net8.0\CuisineApi.sourcelink.json

@@ -146,3 +146,11 @@ C:\workspace\CuisineApi.Tests\obj\Debug\net8.0\refint\CuisineApi.Tests.dll
 C:\workspace\CuisineApi.Tests\obj\Debug\net8.0\CuisineApi.Tests.pdb
 C:\workspace\CuisineApi.Tests\obj\Debug\net8.0\CuisineApi.Tests.genruntimeconfig.cache
 C:\workspace\CuisineApi.Tests\obj\Debug\net8.0\ref\CuisineApi.Tests.dll
+C:\workspace\CuisineApi.Tests\bin\Debug\net8.0\OpenTelemetry.dll
+C:\workspace\CuisineApi.Tests\bin\Debug\net8.0\OpenTelemetry.Api.dll
+C:\workspace\CuisineApi.Tests\bin\Debug\net8.0\OpenTelemetry.Api.ProviderBuilderExtensions.dll
+C:\workspace\CuisineApi.Tests\bin\Debug\net8.0\OpenTelemetry.Exporter.Console.dll
+C:\workspace\CuisineApi.Tests\bin\Debug\net8.0\OpenTelemetry.Extensions.Hosting.dll
+C:\workspace\CuisineApi.Tests\bin\Debug\net8.0\OpenTelemetry.Instrumentation.AspNetCore.dll
+C:\workspace\CuisineApi.Tests\bin\Debug\net8.0\OpenTelemetry.Instrumentation.Http.dll
+C:\workspace\CuisineApi.Tests\obj\Debug\net8.0\CuisineApi.Tests.sourcelink.json
